@@ -11,8 +11,6 @@ const config = {
 	preprocess: seqPreprocessor([preprocess(), preprocessThrelte()]),
 	kit: {
 		adapter: adapter({
-			pages: 'docs',
-			assets: 'docs',
 			precompress: true
 		})
 	}
