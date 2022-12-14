@@ -8,7 +8,6 @@
     let current = 0;
 
     let onclick = () => current = (current + 1) % 6
-
 </script>
 <svelte:window on:keydown={onclick}  on:click={onclick}/>
 <ul class="cards">
@@ -58,9 +57,11 @@
     }
 
     .card {
+        background-color: oklch(83.8% 0.08 120.195);
         list-style: none;
         flex: 0 0 400px;
         border: solid 1px rgba(218, 139, 4, 0);
+        border-radius: 20px;
         height: 680px;
         overflow: hidden;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgba(218, 139, 4, 0) 0px 0px 0px 3px;
@@ -77,4 +78,24 @@
         max-width: 275px;
         align-self: center;
     }
+    .card.card1 {
+        background-color: oklch(85% 0.08 60);
+    }
+    .card.card2 {
+        background-color: oklch(85% 0.08 120);
+    }
+    .card.card3 {
+        background-color: oklch(85% 0.08 180);
+    }
+    .card.card4 {
+        background-color: oklch(85% 0.08 240);
+    }
+    .card.card5 {
+        background-color: oklch(85% 0.08 300);
+    }
+    .card.card6 {
+        background-color: oklch(85% 0.08 360);
+    }
+
+
 </style>
