@@ -2,7 +2,7 @@
 </script>
 
 <header>
-	<h1>Bumblebees</h1>
+	<h1>Шмели</h1>
 </header>
 
 <style>

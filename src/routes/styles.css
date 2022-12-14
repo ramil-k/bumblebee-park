@@ -1,11 +1,13 @@
 @import '@fontsource/fira-mono';
-
+@font-face {
+	font-family: Unbounded;
+	src: url("/Unbounded.ttf");
+}
 :root {
-	--font-body: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	--font-body: Unbounded, 'Open Sans', 'Helvetica Neue', sans-serif;
 	--font-mono: 'Fira Mono', monospace;
 	--color-bg-0: rgb(228, 218, 202);
-	--color-bg-1: hsl(33, 100%, 95%);
+	--color-bg-1: oklch(95% 0.01 160);
 	--color-bg-2: hsl(0, 44%, 95%);
 	--color-theme-1: #ff3e00;
 	--color-theme-2: #40b3ff;
@@ -35,21 +37,32 @@ p {
 }
 
 a {
-	color: var(--color-theme-1);
+	color: oklch(60% 0.1 240);
+	/*display: block;*/
+	/*background-image: linear-gradient(to bottom, oklch(80% 0.1 240) 0, oklch(80% 0.1 240) 100%);*/
+	background-image: linear-gradient(to bottom,rgb(127, 198, 247) 0,rgb(127, 198, 247) 100%);
+	background-position: 0 90%;
+	background-repeat: repeat-x;
+	background-size: 1px 1px;
 	text-decoration: none;
 }
 
 a:hover {
-	text-decoration: underline;
+	color: oklch(60% 0.1 30);
+	background-image: linear-gradient(to bottom,rgb(247, 165, 151) 0,rgb(247, 165, 151) 100%);
 }
 
 h1 {
-	font-size: 2rem;
+	font-size: 8rem;
 	text-align: center;
 }
 
 h2 {
+	font-size: 3rem;
+}
+h3 {
 	font-size: 1rem;
+	font-weight: bold;
 }
 
 pre {
