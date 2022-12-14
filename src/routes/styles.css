@@ -32,6 +32,10 @@ p {
 	font-weight: 400;
 }
 
+h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+}
 p {
 	line-height: 1.5;
 }

@@ -145,5 +145,10 @@
         background-color: oklch(85% 0.08 360);
     }
 
-
+    .card1 h2 {
+        font-size: 3rem;
+    }
+    .card1 h3 {
+        font-size: 5rem;
+    }
 </style>
