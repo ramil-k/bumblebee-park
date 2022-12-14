@@ -10,7 +10,6 @@
     let onclick = () => current = (current + 1) % 6
 
 </script>
-<pre>{current}</pre>
 <svelte:window on:keydown={onclick}  on:click={onclick}/>
 <ul class="cards">
     <li class="card card1" class:current={current === 0}><img src={bumblebee1} alt=""/>
