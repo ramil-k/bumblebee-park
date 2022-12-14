@@ -57,7 +57,8 @@
     }
 
     .card {
-        background-color: oklch(83.8% 0.08 120.195);
+        /*background-color: oklch(83.8% 0.08 120.195);*/
+        background-color: rgb(194.61, 210.2, 151.32);
         list-style: none;
         flex: 0 0 400px;
         border: solid 1px rgba(218, 139, 4, 0);
@@ -78,24 +79,18 @@
         max-width: 275px;
         align-self: center;
     }
-    .card.card1 {
-        background-color: oklch(85% 0.08 60);
-    }
-    .card.card2 {
-        background-color: oklch(85% 0.08 120);
-    }
-    .card.card3 {
-        background-color: oklch(85% 0.08 180);
-    }
-    .card.card4 {
-        background-color: oklch(85% 0.08 240);
-    }
-    .card.card5 {
-        background-color: oklch(85% 0.08 300);
-    }
-    .card.card6 {
-        background-color: oklch(85% 0.08 360);
-    }
+    /*.card.card1 {background-color: oklch(85% 0.08 60);}*/
+    /*.card.card2 {background-color: oklch(85% 0.08 120);}*/
+    /*.card.card3 {background-color: oklch(85% 0.08 180);}*/
+    /*.card.card4 {background-color: oklch(85% 0.08 240);}*/
+    /*.card.card5 {background-color: oklch(85% 0.08 300);}*/
+    /*.card.card6 {background-color: oklch(85% 0.08 360);}*/
+    .card.card1 {background-color: rgb(245.34, 194, 153.05);}
+    .card.card2 {background-color: rgb(198.64, 214.05, 154.95);}
+    .card.card3 {background-color: rgb(145.84, 223.41, 207.61);}
+    .card.card4 {background-color: rgb(157.79, 213.45, 253.26);}
+    .card.card5 {background-color: rgb(213.39, 194.5, 251.03);}
+    .card.card6 {background-color: rgb(250.61, 184.39, 203.47);}
 
 
 </style>
