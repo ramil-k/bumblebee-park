@@ -1,14 +1,15 @@
-<script>
-</script>
+<!--<script>-->
+<!--</script>-->
 
-<header>
-	<h1>Шмели</h1>
-</header>
+<!--<header>-->
+<!--	<h1>Шмели</h1>-->
+<!--</header>-->
 
-<style>
-	header {
-		margin: 20px;
-		display: flex;
-		justify-content: space-between;
-	}
-</style>
+<!--<style>-->
+<!--	header {-->
+<!--		margin: 20px;-->
+<!--		display: flex;-->
+<!--		justify-content: center;-->
+<!--		align-items: center;-->
+<!--	}-->
+<!--</style>-->

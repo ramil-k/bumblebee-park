@@ -14,15 +14,16 @@
 	--color-text: rgba(0, 0, 0, 0.7);
 	--column-width: 42rem;
 	--column-margin-top: 4rem;
-	font-family: var(--font-body);
+	/*font-family: var(--font-body);*/
 	color: var(--color-text);
+	font-size: 20px;
 }
 
 body {
 	min-height: 100vh;
-	margin: 0;
+	margin: auto 0 0;
 	background-attachment: fixed;
-	background-color: var(--color-bg-1);
+	background-color: oklch(95% 0.01 160);
 	background-size: 100vw 100vh;
 }
 

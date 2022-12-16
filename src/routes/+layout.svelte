@@ -4,22 +4,22 @@
 </script>
 
 <div class="app">
-	<Header />
+<!--	<Header />-->
 
-	<main>
 		<slot />
-	</main>
+<!--	<main>-->
+<!--	</main>-->
 
-	<footer>
-		<p>Парк со шмелями</p>
-	</footer>
+<!--	<footer>-->
+<!--		<p>Парк со шмелями</p>-->
+<!--	</footer>-->
 </div>
 
 <style>
 	.app {
 		display: flex;
 		flex-direction: column;
-		min-height: 100vh;
+		height: 100vh;
 	}
 
 	main {
@@ -28,7 +28,6 @@
 		flex-direction: column;
 		padding: 1rem;
 		width: 100%;
-		max-width: 64rem;
 		margin: 0 auto;
 		box-sizing: border-box;
 	}

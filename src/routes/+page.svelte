@@ -10,10 +10,10 @@
     let keyboardReaction = (e) => {
         switch (e.key) {
             case 'ArrowRight':
-                current = (current + 1) % 6;
+                current = Math.min(current + 1, 5);
                 break;
             case 'ArrowLeft':
-                current = (current - 1) % 6;
+                current = Math.max(current - 1, 0);
                 break;
         }
     }
@@ -27,25 +27,29 @@
     >
         Назад
     </a>
-    <ul class="cards">
-        <li class="card card1" class:current={current === 0}><img src={bumblebee1} alt=""/>
+    <ul class="cards" on:click|preventDefault={() => current = Math.min(current + 1, 5)}>
+        <li class="card card1" class:current={current === 0}>
+            <img src={bumblebee1} alt=""/>
             <h2>Шмели</h2>
             <h3>Крутые</h3>
         </li>
-        <li class="card card2" class:current={current === 1}><img src={bumblebee2} alt=""/>
+        <li class="card card2" class:current={current === 1}>
+            <img src={bumblebee2} alt=""/>
             <h2>Шмели</h2>
             <h3>— работящие</h3>
             <p>Они самые эффективные опылители. пчёлы нервно курят.</p>
             <p>В теплицах и оранжереях иногда разводят шмелиные семьи, чтобы они помогали опылять растения.</p>
         </li>
-        <li class="card card3" class:current={current === 2}><img src={bumblebee3} alt=""/>
+        <li class="card card3" class:current={current === 2}>
+            <img src={bumblebee3} alt=""/>
             <h2>Шмели</h2>
             <h3>— выносливые</h3>
             <p>Они живут даже в тундре и в арктическом климате, продолжая и там опылять местные растения, едва ли не
                 единственные.</p>
             <p>Не замерзают они, потому что греются физкультурой, непрерывно сокращая мышцы.</p>
         </li>
-        <li class="card card4" class:current={current === 3}><img src={bumblebee4} alt=""/>
+        <li class="card card4" class:current={current === 3}>
+            <img src={bumblebee4} alt=""/>
             <h2>Шмели</h2>
             <h3>— упорные</h3>
             <p>Они не производят мёд. Им некогда. Они трудятся</p>
@@ -58,7 +62,8 @@
             <p>Они не жалят, если их не разозлить. Они обнажают своё жало только для самообороны и защиты гнезда.</p>
             <p>Шмели не умирают после укуса, они просто хорошо воспитаны.</p>
         </li>
-        <li class="card card6" class:current={current === 5}><img src={bumblebee1} alt=""/>
+        <li class="card card6" class:current={current === 5}>
+            <img src={bumblebee1} alt=""/>
             <h2>Шмели</h2>
             <h3>тоже иногда выгорают</h3>
             <p>Если на дороге лежит шмель — Он не умер, он просто устал. Отнеси его в сторону, чтобы никто не
@@ -77,48 +82,62 @@
 
 <style>
     .root {
-        display: flex;
+        display: grid;
+        grid-template-columns: min-content 1fr min-content;
         justify-content: stretch;
-        align-items: center;
+        align-items: end;
+        height: 100%;
+        gap: 20px;
     }
 
     .control {
-        flex: 0;
         font-size: 1.5rem;
     }
 
     .cards {
         flex-grow: 1;
         display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
+        margin: 0;
+        /*flex-wrap: wrap;*/
+        /*gap: 30px;*/
         justify-content: center;
-        align-items: center;
+        /*align-items: center;*/
     }
 
     .card {
         background-color: oklch(83.8% 0.08 120.195);
         list-style: none;
-        flex: 0 0 400px;
         border: solid 1px rgba(218, 139, 4, 0);
-        border-radius: 20px;
-        height: 680px;
-        overflow: hidden;
+        border-radius: 20px 20px 0 0;
+        overflow: visible;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgba(218, 139, 4, 0) 0px 0px 0px 3px;
-        display: flex;
+        display: grid;
         flex-direction: column;
-        padding: 40px;
-        align-items: stretch;
+        padding: 40px 40px 0;
+        grid-template-columns: minmax(min-content, 600px);
+        align-items: center;
+        justify-content: center;
+        height: max-content;
     }
 
+    .card > * {
+        max-width: 600px;
+
+    }
+    .card > p {
+        margin-bottom: 0;
+    }
     .card:not(.current) {
         display: none;
     }
 
     .card > img {
-        width: 100%;
-        max-width: 275px;
-        align-self: center;
+
+        margin-top: -150px;
+        margin-bottom: -120px;
+        margin-right: -150px;
+        width: 400px;
+        justify-self: end;
     }
 
     .card.card1 {
@@ -149,6 +168,6 @@
         font-size: 3rem;
     }
     .card1 h3 {
-        font-size: 5rem;
+        font-size: 3rem;
     }
 </style>
