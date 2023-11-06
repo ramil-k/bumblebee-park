@@ -105,7 +105,7 @@
     }
 
     .card {
-        background-color: oklch(83.8% 0.08 120.195);
+        background-color: oklch(83% 0.08 120);
         list-style: none;
         border: solid 1px rgba(218, 139, 4, 0);
         border-radius: 20px 20px 0 0;
